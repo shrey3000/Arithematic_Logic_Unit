@@ -2,12 +2,12 @@ module ALU_4bit(
   input [3:0] A,
   input [3:0] B,
   input [3:0] ALU_Sel,
-  input clk , reset,
+  input clock , reset,
   output reg [3:0] ALU_Out,
   output reg CarryOut
 );
 
-always @(posedge clk or posedge reset) begin
+  always @(posedge clock or posedge reset) begin
     if(reset) begin
       ALU_Out  <= 8'd0;
       CarryOut <= 1'd0;
