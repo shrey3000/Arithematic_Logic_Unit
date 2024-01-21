@@ -26,7 +26,7 @@ module top;
   
   alu_interface intf(.clock(clock));
   
-  alu dut(
+  alu ALU_4bit(
     .clock(intf.clock),
     .reset(intf.reset),
     .A(intf.a),
